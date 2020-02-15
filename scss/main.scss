@@ -8,20 +8,31 @@ body {
             border-radius: 15px 15px;
             justify-content: center;
             align-items: center;
+            padding: 30px;
+
+            h1 {
+                text-align: center;
+
+            }
 
             form {
                 flex-direction: column;
                 display: flex;
-                justify-content: space-evenly;
                 padding: 10px;
+                justify-content: space-evenly;
+
 
                 .box-input {
+                    display: flex;
                     justify-content: center;
                     align-items: center;
 
+
+
                     input {
                         display: flex;
-                        flex-direction: row;
+                        width: 200px;
+
 
                         // input {}
                     }
@@ -30,17 +41,18 @@ body {
 
             .main-box-button {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: center;
                 //border: 2px solid red;
-                border-radius: 0px 0px 15px 15px;
+
                 background-color: palegreen;
+                padding: 20px;
 
 
                 .innerbox-Button {
                     display: flex;
                     justify-content: center;
-                    padding: 20px;
+                    padding: 10px;
                 }
             }
         }
@@ -55,28 +67,25 @@ body {
             .main-ContentBox2 {
                 background: olive;
                 margin: 10px;
-                flex-direction: row;
+                flex-direction: column;
                 display: flex;
+                padding: 20px;
 
                 .Content-innrebox {
                     display: flex;
                     flex-direction: row;
-                    margin: 15px;
-
+                    justify-content: center;
 
                     .contentBox {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        padding: 10px;
-                    }
+                        padding: 5px;
 
-
-
-                    h2 {
-
-                        font-weight: bold;
-                        font-size: 15px;
+                        h2 {
+                            font-weight: bold;
+                            font-size: 15px;
+                        }
                     }
 
                 }
@@ -84,25 +93,24 @@ body {
             }
 
         }
-    }
 
-    .mainbox-page {
-        display: flex;
-        flex-direction: row;
-        margin: 10px;
-
-        .box-page {
+        .mainbox-page {
             display: flex;
+            flex-direction: row;
+            margin: 10px;
 
+            .box-page {
+                display: flex;
+
+            }
         }
-
     }
 
 }
 
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
 
     body {
         background-color: orange;
@@ -111,6 +119,7 @@ body {
             border-radius: 17px;
 
             .main-box-input {
+
 
                 form {
                     display: flex;
@@ -128,23 +137,37 @@ body {
                     }
 
                 }
+
+                .main-box-button {
+                    flex-direction: row;
+
+                    .innerbox-Button {
+                        flex-direction: row;
+
+                    }
+
+                }
             }
 
-            .main-box-button {
+            .main-ContentBox {
 
-                .innerbox-Button {
+                .main-ContentBox2 {
                     flex-direction: row;
-                    display: flex;
+                    justify-content: space-evenly;
 
-                    /*.button-box {
-                        display: flex;
+                    .Content-innrebox {
+                        flex-direction: row;
+                        justify-content: space-evenly;
 
-                    }*/
+                        .contentBox {}
+
+
+                    }
+
                 }
 
             }
 
         }
     }
-
 }
