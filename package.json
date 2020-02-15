@@ -1,0 +1,30 @@
+{
+  "name": "FEDdatabas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "unittest & cy:run",
+    "start": "nodemon main.js",
+    "unittest": "mocha",
+    "cypress": "cypress open",
+    "cy:run": "cy:run-- record --spec cypress/integration/toDo_test_spec.js"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mocha": "^7.0.1",
+    "mongodb": "^3.5.2",
+    "mongoose": "^5.8.10",
+    "node-sass-middleware": "^0.11.0"
+  },
+  "devDependencies": {
+    "cypress": "^4.0.1",
+    "nodemon": "^2.0.2"
+  }
+}
