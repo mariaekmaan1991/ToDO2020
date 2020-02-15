@@ -5,28 +5,32 @@ body .main-box {
     background-color: orchid;
     border-radius: 15px 15px;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    padding: 30px; }
+    body .main-box .main-box-input h1 {
+      text-align: center; }
     body .main-box .main-box-input form {
       flex-direction: column;
       display: flex;
-      justify-content: space-evenly;
-      padding: 10px; }
+      padding: 10px;
+      justify-content: space-evenly; }
       body .main-box .main-box-input form .box-input {
+        display: flex;
         justify-content: center;
         align-items: center; }
         body .main-box .main-box-input form .box-input input {
           display: flex;
-          flex-direction: row; }
+          width: 200px; }
     body .main-box .main-box-input .main-box-button {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
-      border-radius: 0px 0px 15px 15px;
-      background-color: palegreen; }
+      background-color: palegreen;
+      padding: 20px; }
       body .main-box .main-box-input .main-box-button .innerbox-Button {
         display: flex;
         justify-content: center;
-        padding: 20px; }
+        padding: 10px; }
   body .main-box .main-ContentBox {
     display: flex;
     flex-direction: column;
@@ -36,29 +40,29 @@ body .main-box {
     body .main-box .main-ContentBox .main-ContentBox2 {
       background: olive;
       margin: 10px;
-      flex-direction: row;
-      display: flex; }
+      flex-direction: column;
+      display: flex;
+      padding: 20px; }
       body .main-box .main-ContentBox .main-ContentBox2 .Content-innrebox {
         display: flex;
         flex-direction: row;
-        margin: 15px; }
+        justify-content: center; }
         body .main-box .main-ContentBox .main-ContentBox2 .Content-innrebox .contentBox {
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 10px; }
-        body .main-box .main-ContentBox .main-ContentBox2 .Content-innrebox h2 {
-          font-weight: bold;
-          font-size: 15px; }
+          padding: 5px; }
+          body .main-box .main-ContentBox .main-ContentBox2 .Content-innrebox .contentBox h2 {
+            font-weight: bold;
+            font-size: 15px; }
+  body .main-box .mainbox-page {
+    display: flex;
+    flex-direction: row;
+    margin: 10px; }
+    body .main-box .mainbox-page .box-page {
+      display: flex; }
 
-body .mainbox-page {
-  display: flex;
-  flex-direction: row;
-  margin: 10px; }
-  body .mainbox-page .box-page {
-    display: flex; }
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   body {
     background-color: orange; }
     body .main-box {
@@ -71,10 +75,13 @@ body .mainbox-page {
           flex-direction: row; }
           body .main-box .main-box-input form .box-input input {
             display: flex; }
-      body .main-box .main-box-button .innerbox-Button {
+      body .main-box .main-box-input .main-box-button {
+        flex-direction: row; }
+        body .main-box .main-box-input .main-box-button .innerbox-Button {
+          flex-direction: row; }
+      body .main-box .main-ContentBox .main-ContentBox2 {
         flex-direction: row;
-        display: flex;
-        /*.button-box {
-                        display: flex;
-
-                    }*/ } }
+        justify-content: space-evenly; }
+        body .main-box .main-ContentBox .main-ContentBox2 .Content-innrebox {
+          flex-direction: row;
+          justify-content: space-evenly; } }
