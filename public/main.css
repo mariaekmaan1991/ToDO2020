@@ -1,0 +1,80 @@
+body .main-box {
+  margin: 50px; }
+  body .main-box .main-box-input {
+    margin-bottom: 20px;
+    background-color: orchid;
+    border-radius: 15px 15px;
+    justify-content: center;
+    align-items: center; }
+    body .main-box .main-box-input form {
+      flex-direction: column;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px; }
+      body .main-box .main-box-input form .box-input {
+        justify-content: center;
+        align-items: center; }
+        body .main-box .main-box-input form .box-input input {
+          display: flex;
+          flex-direction: row; }
+    body .main-box .main-box-input .main-box-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      border-radius: 0px 0px 15px 15px;
+      background-color: palegreen; }
+      body .main-box .main-box-input .main-box-button .innerbox-Button {
+        display: flex;
+        justify-content: center;
+        padding: 20px; }
+  body .main-box .main-ContentBox {
+    display: flex;
+    flex-direction: column;
+    background-color: lightcoral;
+    border-radius: 20px;
+    padding: 20px; }
+    body .main-box .main-ContentBox .main-ContentBox2 {
+      background: olive;
+      margin: 10px;
+      flex-direction: row;
+      display: flex; }
+      body .main-box .main-ContentBox .main-ContentBox2 .Content-innrebox {
+        display: flex;
+        flex-direction: row;
+        margin: 15px; }
+        body .main-box .main-ContentBox .main-ContentBox2 .Content-innrebox .contentBox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px; }
+        body .main-box .main-ContentBox .main-ContentBox2 .Content-innrebox h2 {
+          font-weight: bold;
+          font-size: 15px; }
+
+body .mainbox-page {
+  display: flex;
+  flex-direction: row;
+  margin: 10px; }
+  body .mainbox-page .box-page {
+    display: flex; }
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: orange; }
+    body .main-box {
+      border-radius: 17px; }
+      body .main-box .main-box-input form {
+        display: flex;
+        flex-direction: row; }
+        body .main-box .main-box-input form .box-input {
+          display: flex;
+          flex-direction: row; }
+          body .main-box .main-box-input form .box-input input {
+            display: flex; }
+      body .main-box .main-box-button .innerbox-Button {
+        flex-direction: row;
+        display: flex;
+        /*.button-box {
+                        display: flex;
+
+                    }*/ } }
