@@ -47,7 +47,7 @@ const option = {
 }
 
 
-const port = process.env.PORT || 8500;
+const port = process.env.PORT || 8000;
 
 mongoose.connect(config.databasUrl, option).then(() => {
 
