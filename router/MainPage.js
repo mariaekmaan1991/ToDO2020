@@ -1,7 +1,7 @@
 const express = require("express")
 
 const router = express.Router();
-const Comment = require("../model/modelComment.js");
+const CommentsModel = require("../model/modelComment.js");
 
 const items = 6;
 router.get("/MainPage", async (req, res) => {
@@ -9,7 +9,7 @@ router.get("/MainPage", async (req, res) => {
     const page = req.query.page || 1;
     const datet = req.query.date || 1;
     console.log(req.query)
-    const komment = await Comment.find()
+    const CommentsModelSave = await CommentsModel.find()
         .sort({
             author: sorted,
             date: datet
@@ -20,7 +20,7 @@ router.get("/MainPage", async (req, res) => {
         // i mer förklaring
         .limit(items)
     res.render("MainPage", {
-        komment
+        CommentsModelSave
     })
 })
 

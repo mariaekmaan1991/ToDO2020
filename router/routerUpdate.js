@@ -2,15 +2,16 @@ const express = require("express")
 
 const routerUpdate = express.Router();
 
-const Comment = require("../model/modelComment.js");
+const CommentsModel = require("../model/modelComment.js");
 
 routerUpdate.get("/update/:id", async (req, res) => {
-  const SaveUpdate = await Comment.findById({
+  const CommentsModelSave = await CommentsModel.findById({
     _id: req.params.id
   })
   console.log("hej")
   res.render("update", {
-    SaveUpdate
+    CommentsModelSave
+
   })
   // skickar {SaveUpdate} till update.ejs
 })
@@ -18,7 +19,7 @@ routerUpdate.get("/update/:id", async (req, res) => {
 routerUpdate.post("/update/:id", async (req, res) => { // här blir jag lite förrvirad
   console.log(req.body)
   try {
-    const SaveUpdate = await Comment.updateOne({
+    const CommentsModelSaveUpdate = await CommentsModel.updateOne({
         _id: req.body._id
       }, // varför ska de var body , jag tycker de borde vara params eftersom borde lästa av vilken man vill upptatera sammtidigt så läser inmatningen body
       {
