@@ -31,7 +31,7 @@ router.get("/MainPage", (req, res) => {
 
 router.post("/MainPage", async (req, res) => {
     console.log("Why ", req.body)
-    const createComments = new Comment({ // måste hämtas här ifrån const Commentar=require("../model/commentar")
+    const createComments = new CommentsModel({ // måste hämtas här ifrån const Commentar=require("../model/commentar")
         author: req.body.author,
         text: req.body.text
     })
