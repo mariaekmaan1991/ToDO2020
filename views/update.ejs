@@ -1,0 +1,10 @@
+<%- include("head.ejs")%>
+
+<body>
+    <form method="post">
+        <input type="text" name="text" value="<%=SaveUpdate.text%>">
+        <input type="text" name="author" value="<%=SaveUpdate.author%>">
+        <input type="text" name="_id" value="<%=SaveUpdate._id%>" hidden>
+        <button type="submit">save update</button>
+    </form>
+</body>
