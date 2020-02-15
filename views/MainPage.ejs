@@ -1,82 +1,84 @@
 <%- include("head.ejs")%>
 
-<div class="main-box">
-    <div class="main-box-input">
+<body>
+    <div class="main-box">
+        <div class="main-box-input">
 
-        <h1>Kom ihåg lista</h1>
-        <form action="/MainPage" method="post">
-            <div class="box-input">
-                <h3>Author:</h3><input id="author" type=" text" name="author" id="" required>
+            <h1>Kom ihåg lista</h1>
+            <form action="/MainPage" method="post">
+                <div class="box-input">
+                    <h3>Author:</h3><input id="author" type=" text" name="author" id="" required>
+                </div>
+                <div class="box-input">
+                    <h3>Text:</h3> <input id="text" type="text" name="text" id="" required>
+                </div>
+                <div class="box-input"><button id="buttonSave" type="submit">save</button></div>
+            </form>
+
+
+            <div class="main-box-button">
+                <div class="innerbox-Button"><a href="/MainPage?date=1"> Sortera-date</a></div>
+                <div class="innerbox-Button"><a href="/MainPage?date=-1">Sorteradate-1 </a></div>
+                <div class="innerbox-Button"><a href="/MainPage?sort=1">Framåt</a></div>
+                <div class="innerbox-Button"><a href="/MainPage?sort=-1">bakåt</a></div>
+                <div class="innerbox-Button"><a href="/About">about</a></div>
             </div>
-            <div class="box-input">
-                <h3>Text:</h3> <input id="text" type="text" name="text" id="" required>
+
+        </div>
+        <div class="main-ContentBox">
+            <% CommentsModelSave.forEach( (comment)=>{%>
+
+            <%  const SplitDate= comment.date %>
+            <div class="main-ContentBox2">
+                <div class="Content-innrebox">
+                    <div class="contentBox">
+                        <h2>Author:</h2>
+                    </div>
+
+                    <div class="contentBox">
+                        <%= comment.author%>
+                    </div>
+                </div>
+                <div class="Content-innrebox">
+                    <div class="contentBox">
+                        <h2>Text:</h2>
+                    </div>
+                    <div class="contentBox">
+                        <%= comment.text %>
+                    </div>
+                </div>
+
+                <div class="Content-innrebox">
+                    <div class="contentBox">
+                        <h2>Date:</h2>
+                    </div>
+                    <div class="contentBox">
+                        <%=  SplitDate.getDate() %>/
+                        <%=  SplitDate.getMonth() %>/
+                        <%=  SplitDate.getFullYear()%>
+                    </div>
+                </div>
+                <div class="Content-innrebox">
+                    <div class="contentBox">
+                        <a lass="deleteHello" href="/delete/<%=comment._id%>"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                    <div class="contentBox">
+                        <a href="/update/<%=comment._id%>"><i class="fas fa-pen"></i></a>
+                    </div>
+                </div>
+
             </div>
-            <div class="box-input"><button id="buttonSave" type="submit">save</button></div>
-        </form>
+            <% }) %>
 
 
-        <div class="main-box-button">
-            <div class="innerbox-Button"><a href="/MainPage?date=1"> Sortera-date</a></div>
-            <div class="innerbox-Button"><a href="/MainPage?date=-1">Sorteradate-1 </a></div>
-            <div class="innerbox-Button"><a href="/MainPage?sort=1">Framåt</a></div>
-            <div class="innerbox-Button"><a href="/MainPage?sort=-1">bakåt</a></div>
-            <div class="innerbox-Button"><a href="/About">about</a></div>
+            <div class="mainbox-page">
+                <div class="box-page"> <a href="/MainPage/?page=1">page1</a></div>
+                <div class="box-page"> <a href="/MainPage/?page=2">page2</a></div>
+            </div>
         </div>
 
     </div>
-    <div class="main-ContentBox">
-        <% CommentsModelSave.forEach( (comment)=>{%>
-
-        <%  const SplitDate= comment.date %>
-        <div class="main-ContentBox2">
-            <div class="Content-innrebox">
-                <div class="contentBox">
-                    <h2>Author:</h2>
-                </div>
-
-                <div class="contentBox">
-                    <%= comment.author%>
-                </div>
-            </div>
-            <div class="Content-innrebox">
-                <div class="contentBox">
-                    <h2>Text:</h2>
-                </div>
-                <div class="contentBox">
-                    <%= vomment.text %>
-                </div>
-            </div>
-
-            <div class="Content-innrebox">
-                <div class="contentBox">
-                    <h2>Date:</h2>
-                </div>
-                <div class="contentBox">
-                    <%=  SplitDate.getDate() %>/
-                    <%=  SplitDate.getMonth() %>/
-                    <%=  SplitDate.getFullYear()%>
-                </div>
-            </div>
-            <div class="Content-innrebox">
-                <div class="contentBox">
-                    <a lass="deleteHello" href="/delete/<%=komment._id%>"><i class="fas fa-trash-alt"></i></a>
-                </div>
-                <div class="contentBox">
-                    <a href="/update/<%=komment._id%>"><i class="fas fa-pen"></i></a>
-                </div>
-            </div>
-
-        </div>
-        <% }) %>
-
-
-        <div class="mainbox-page">
-            <div class="box-page"> <a href="/MainPage/?page=1">page1</a></div>
-            <div class="box-page"> <a href="/MainPage/?page=2">page2</a></div>
-        </div>
-    </div>
-
-</div>
+</body>
 
 
 
