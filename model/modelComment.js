@@ -29,6 +29,6 @@ const schemaComment = new mongoose.Schema(
 
 
 )
-const Comment = mongoose.model("Comment", schemaComment) // "Comment" i data basen collection
+const CommentsModel = mongoose.model("Comment", schemaComment) // "Comment" i data basen collection
 
-module.exports = Comment;
+module.exports = CommentsModel;
