@@ -25,9 +25,9 @@
 
     </div>
     <div class="main-ContentBox">
-        <%komment.forEach( (komment)=>{%>
+        <% CommentsModelSave.forEach( (comment)=>{%>
 
-        <%  const SplitDate= komment.date %>
+        <%  const SplitDate= comment.date %>
         <div class="main-ContentBox2">
             <div class="Content-innrebox">
                 <div class="contentBox">
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="contentBox">
-                    <%= komment.author%>
+                    <%= comment.author%>
                 </div>
             </div>
             <div class="Content-innrebox">
@@ -43,7 +43,7 @@
                     <h2>Text:</h2>
                 </div>
                 <div class="contentBox">
-                    <%= komment.text %>
+                    <%= vomment.text %>
                 </div>
             </div>
 
