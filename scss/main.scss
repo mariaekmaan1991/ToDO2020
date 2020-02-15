@@ -1,0 +1,150 @@
+body {
+    .main-box {
+        margin: 50px;
+
+        .main-box-input {
+            margin-bottom: 20px;
+            background-color: orchid;
+            border-radius: 15px 15px;
+            justify-content: center;
+            align-items: center;
+
+            form {
+                flex-direction: column;
+                display: flex;
+                justify-content: space-evenly;
+                padding: 10px;
+
+                .box-input {
+                    justify-content: center;
+                    align-items: center;
+
+                    input {
+                        display: flex;
+                        flex-direction: row;
+
+                        // input {}
+                    }
+                }
+            }
+
+            .main-box-button {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                //border: 2px solid red;
+                border-radius: 0px 0px 15px 15px;
+                background-color: palegreen;
+
+
+                .innerbox-Button {
+                    display: flex;
+                    justify-content: center;
+                    padding: 20px;
+                }
+            }
+        }
+
+        .main-ContentBox {
+            display: flex;
+            flex-direction: column;
+            background-color: lightcoral;
+            border-radius: 20px;
+            padding: 20px;
+
+            .main-ContentBox2 {
+                background: olive;
+                margin: 10px;
+                flex-direction: row;
+                display: flex;
+
+                .Content-innrebox {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 15px;
+
+
+                    .contentBox {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                    }
+
+
+
+                    h2 {
+
+                        font-weight: bold;
+                        font-size: 15px;
+                    }
+
+                }
+
+            }
+
+        }
+    }
+
+    .mainbox-page {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+
+        .box-page {
+            display: flex;
+
+        }
+
+    }
+
+}
+
+
+
+@media screen and (min-width: 600px) {
+
+    body {
+        background-color: orange;
+
+        .main-box {
+            border-radius: 17px;
+
+            .main-box-input {
+
+                form {
+                    display: flex;
+                    flex-direction: row;
+
+                    .box-input {
+                        display: flex;
+                        flex-direction: row;
+
+                        input {
+                            display: flex;
+
+                        }
+
+                    }
+
+                }
+            }
+
+            .main-box-button {
+
+                .innerbox-Button {
+                    flex-direction: row;
+                    display: flex;
+
+                    /*.button-box {
+                        display: flex;
+
+                    }*/
+                }
+
+            }
+
+        }
+    }
+
+}
